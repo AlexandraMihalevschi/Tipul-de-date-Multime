@@ -1,0 +1,11 @@
+A = set(input("Dati sirul 1: "))
+B = set(input("Dati sirul 2: "))
+def cleaning_set(n):
+    n.remove(" ")
+    n.remove(",")
+cleaning_set(A)
+cleaning_set(B)
+print("Care se intalnesc in cel putin un sir: ", A.union(B))
+print("Care se intalnesc in ambele siruri: ", A.intersection(B))
+print("Caractere care se intalnesc in A si nu sunt in B", A.difference(B))
+print("Caractere care se intalnesc in B si nu sunt in A", B.difference(A))
